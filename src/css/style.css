@@ -1,0 +1,202 @@
+/* style untuk navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #282c34;
+  overflow-x: hidden;
+}
+my-navbar {
+  background-color: #202125;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 3px 2px #111111;
+}
+my-navbar .logo h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+}
+my-navbar ul {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+}
+my-navbar ul li a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s all ease;
+}
+
+my-navbar ul li:hover a {
+  color: aqua;
+}
+
+#root {
+  width: 90%;
+  margin: 50px auto;
+}
+#search {
+  display: flex;
+  gap: 10px;
+  z-index: -10;
+  width: 100%;
+}
+
+#search .inputSearch::placeholder {
+  color: #202020;
+  transition: 0.2s all ease;
+}
+
+#search .inputSearch {
+  padding: 10px 16px;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #c2c2c5;
+  outline: none;
+  color: #161616;
+  border: none;
+}
+
+#search #btn {
+  padding: 10px 16px;
+  outline: none;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #c2c2c5;
+  color: #161616;
+}
+
+#content {
+  margin-top: 50px;
+}
+
+#content .myContent .link {
+  text-decoration: none;
+}
+
+#content .myContent .items .title p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+#content .myContent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+#content .myContent .items {
+  background: #4b4a4a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#content .myContent .items .images {
+  border-radius: 10px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  opacity: 1;
+}
+
+#content .myContent .items:hover .images {
+  opacity: 0.5;
+}
+
+#content .myContent .items .title {
+  text-align: center;
+  margin-top: 5px;
+}
+
+footer {
+  background: #222;
+  margin-top: 6vh;
+  padding-top: 2.5em;
+  display: none;
+  padding-bottom: 3em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+footer .copyright {
+  display: grid;
+  justify-content: center;
+}
+footer .copyright p {
+  color: #a8a7a7;
+  font-size: 0.8em;
+  text-align: center;
+}
+footer .copyright p:nth-child(2) {
+  margin-top: 3px;
+}
+
+#root {
+  z-index: 1;
+}
+.movieResponse {
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 2em;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 992px) {
+  #content .myContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #content .myContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movieResponse {
+    font-size: 1.5em;
+  }
+  my-navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background: #202020;
+    transform: translateX(100%);
+    transition: 1s all ease;
+  }
+}
